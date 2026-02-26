@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 폰트어썸 불러오기 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+</head>
+<body>
+    <header class="con-min-width border-green">
+        <div class="con border-blue flex height-100p">
+            <div class="logo_box img-box flex-as-c">
+                <a href="#">
+                    <img src="../imgs/imgi_18_logo_black.svg" alt="logo_img">
+                </a>
+            </div>
+
+            <div class="flex-grow-1"></div>
+
+            <nav class="menu_box border-red">
+                <ul class="flex height-100p">
+                    <li><a href="#" class="flex flex-ai-c height-100p">은행소개</a></li>
+                    <li><a href="#" class="flex flex-ai-c height-100p">IR투자정보</a></li>
+                    <li><a href="#" class="flex flex-ai-c height-100p">상품안내</a></li>
+                    <li><a href="#" class="flex flex-ai-c height-100p">고객센터</a></li>
+                </ul>
+            </nav>
+
+            <div class="drop-down flex-as-c">
+                <button class="drop_btn">
+                    <span>관련사이트</span>
+                    <span class="ico"><i class="fa-solid fa-angle-down"></i></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <style>
+        /* 노말라이즈 */
+        body, ul, li {
+        margin:0;
+        padding:0;
+        list-style:none;
+        }
+
+        a {
+        color:inherit;
+        text-decoration:none;
+        }
+
+        /* 라이브러리 */
+        .border-red {
+        border:4px solid red;
+        }
+
+        .border-pink {
+        border:4px solid pink;
+        }
+
+        .border-blue {
+        border:4px solid blue;
+        }
+
+        .border-green {
+        border:4px solid green;
+        }
+
+        .border-black {
+        border:4px solid black;
+        }
+
+        .border-gold {
+        border:4px solid gold;
+        }
+
+        .flex {
+            display:flex;
+        }
+
+        .flex-jc-e {
+            justify-content:flex-end;
+        }
+
+        .flex-jc-s {
+            justify-content:flex-start;
+        }
+
+        .flex-jc-c {
+            justify-content:center;
+        }
+
+        .flex-jc-sb {
+            justify-content:space-between;
+        }
+
+        .flex-ai-c {
+            align-items:center;
+        }
+
+        .flex-as-c {
+            align-self: center;
+        }
+
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+
+        .height-100p {
+            height:100%;
+        }
+
+        .block {
+            display:block;
+        }
+
+        .con {
+            margin-left:auto;
+            margin-right:auto;
+        }
+
+        .img-box > img {
+            width: 100%;
+            display: block;
+        }
+
+        .relative {
+            position: relative;
+        }
+
+        /* 커스텀 */
+        .con {
+            width: 1080px;
+        }
+
+        .con-min-width {
+            min-width: 1080px;
+        }
+
+        ::selection {
+            background-color: #FFE100;
+        }
+
+        /* -------------헤더 시작-------------- */
+        header {
+            height: 80px;
+            font-size: 15px;
+            background-color: #fff;
+        }
+
+        /* 로고 */
+        header .logo_box > a {
+            width: 116px;
+        }
+
+        /* dropdown menu */
+        header .drop_btn {
+            background: rgba(244, 244, 244, .8);
+            color: rgba(68, 68, 68, .8);
+            border: 1px solid rgba(229, 229, 229, .8);
+            margin: 0 28px 0 14px;
+            padding: 0 14px 0 18px;
+            height: 40px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 40px;
+        }
+
+        header .drop_btn .ico {
+            display: inline-block;
+            margin-left: 5px;
+        }
+    </style>
+</body>
+</html>
