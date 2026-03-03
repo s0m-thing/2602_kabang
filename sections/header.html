@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +8,8 @@
     <!-- 폰트어썸 불러오기 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
+    <!-- 제이쿼리 불러오기 -->
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
     <header class="con-min-width">
@@ -53,7 +55,7 @@
                                             <li><a href="#" class="block">입찰공고</a></li>
                                         </ul>
                                     </li>
-                                    <li><a href="#" class="block">인재영입</a></li>
+                                    <li><a href="#" class="block" target="_blank">인재영입</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -105,7 +107,7 @@
                                         <a href="#" class="block">IR일정</a>
                                         <ul>
                                             <li><a href="#" class="block">IR행사</a></li>
-                                            <li><a href="#" class="block">IR미팅예약</a></li>
+                                            <li><a href="#" class="block" target="_blank">IR미팅예약</a></li>
                                             <li><a href="#" class="block">주주총회</a></li>
                                         </ul>
                                     </li>
@@ -271,10 +273,18 @@
                 </ul>
             </nav>
 
-            <div class="drop-down flex-as-c">
+            <div class="drop_down flex-as-c">
                 <button class="drop_btn">
                     <span>관련사이트</span>
-                     <span class="ico"><i class="fa-solid fa-angle-up"></i></span>
+
+                     <div class="drop_down_content">
+                        <ul>
+                            <li><a href="#" target="_blank"><span>카카오뱅크 AD</span></a></li>
+                            <li><a href="#" target="_blank"><span>카카오뱅크 인증서</span></a></li>
+                            <li><a href="#" target="_blank"><span>금융기술연구소</span></a></li>
+                            <li><a href="#" target="_blank"><span>기술블로그</span></a></li>
+                        </ul>
+                     </div>
                 </button>
             </div>
         </div>
@@ -497,6 +507,25 @@
             text-align: center;
         }
 
+        header .menu_box .menu_box-sec_menu ul li a[target="_blank"]::after {
+            content: "";
+            width: 14px;
+            height: 14px;
+            display: inline-block;
+            background: url(../imgs/svg_line_outlink.svg);
+            background-size: 14px 14px;
+            margin-left: 8px;
+            margin-top: -2px;
+            vertical-align: middle;
+        }
+
+        header .menu_box .menu_box-sec_menu > ul > li > a[target="_blank"]::after {
+            width: 18px;
+            height: 18px;
+            background-size: 18px 18px;
+            margin-top: -5px;
+        }
+
         /* 메뉴 박스 - 3차 메뉴 */
         header .menu_box .menu_box-sec_menu ul ul > li > a {
             margin-bottom: 24px;
@@ -506,6 +535,10 @@
         }
 
         /* dropdown menu */
+        header .drop_down {
+            position: relative;
+        }
+
         header .drop_btn {
             background: rgba(244, 244, 244, .8);
             color: rgba(68, 68, 68, .8);
@@ -518,12 +551,83 @@
             border-radius: 40px;
         }
 
-        header .drop_btn .ico {
-            display: inline-block;
-            margin-left: 5px;
+        header .drop_down .drop_btn::after {
+			content: "";
+			width: 12px;
+			height: 12px;
+			margin-left: 10px;
+			background: url(/imgs/svg_line_arrow_down.svg);
+			background-size: 12px;
+			display: inline-block;
+            transition: all .3s;
+		}
+
+        header .drop_down .drop_btn.rotate::after {
+            transform: rotate(-180deg);
         }
 
 
+        header .drop_down .drop_down_content {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(4px);
+            width: 240px;
+            margin-top: 29px;
+            line-height: 48px;
+            border-radius: 6px;
+            background-color: #fff;
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, .12);
+            visibility: hidden;
+            opacity: 0;
+            transition: all .1s linear;
+        }
+
+        header .drop_down .drop_down_content.is-active {
+            visibility: visible;
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        header .drop_down .drop_down_content a {
+            font-size: 13px;
+            display: block;
+            padding: 0 24px;
+            box-sizing: border-box;
+        }
+
+        header .drop_down .drop_down_content a:hover {
+            background-color: #f7f7f7;
+            text-decoration: underline;
+        }
+
+        header .drop_down a[target="_blank"]::after {
+            content: "";
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            background: url(../imgs/svg_line_outlink.svg);
+            background-size: 12px 12px;
+            margin-left: 8px;
+            margin-top: -3px;
+            vertical-align: middle;
+        }
     </style>
+
+
+<script >
+    $('.drop_btn').click(function() {
+        var dropDownContent = $('.drop_down_content');
+        var $this = $(this);
+
+        if ( dropDownContent.hasClass('is-active') ) {
+            dropDownContent.removeClass('is-active');
+            $this.removeClass('rotate');
+        } else {
+            dropDownContent.addClass('is-active');
+            $this.addClass('rotate');
+        }
+    })
+</script>
 </body>
 </html>
