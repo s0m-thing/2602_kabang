@@ -276,7 +276,6 @@
             <div class="drop_down flex-as-c">
                 <button class="drop_btn">
                     <span>관련사이트</span>
-
                      <div class="drop_down_content">
                         <ul>
                             <li><a href="#" target="_blank"><span>카카오뱅크 AD</span></a></li>
@@ -638,18 +637,25 @@
 
 
 <script >
-    $('.drop_btn').click(function() {
-        var dropDownContent = $('.drop_down_content');
-        var $this = $(this);
+    let $dropDownContent = $('.drop_down_content');
+		let $dropBtn = $('.drop_btn');
 
-        if ( dropDownContent.hasClass('is-active') ) {
-            dropDownContent.removeClass('is-active');
-            $this.removeClass('rotate');
-        } else {
-            dropDownContent.addClass('is-active');
-            $this.addClass('rotate');
-        }
-    })
+		$dropBtn.click(function() {		
+			$dropDownContent.toggleClass('is-active');
+			$dropBtn.toggleClass('rotate');
+		});
+
+		$(window).click(function(e) {
+			if ( !$(e.target).closest('.drop_btn').length ) {
+				$dropDownContent.removeClass('is-active');
+				$dropBtn.removeClass('rotate');
+			}
+		});
+
+		$('header .menu_box > ul > li').mouseenter(function() {
+			$dropDownContent.removeClass('is-active');
+			$dropBtn.removeClass('rotate');
+		});
 </script>
 </body>
 </html>
