@@ -36,15 +36,12 @@
                         <img src="../imgs/imgi_2_home_arr.png" alt="">
                     </a>
                 </div>
-
             </div>
         </div>
     </section>
     <div class="md_divider"></div>
 
-    	<section class="md_sec md_sec_2 con">
-		<div></div>
-		<div></div>
+    <section class="md_sec md_sec_2 con">
 		<div>
 			<div class="txt_box">
 				<h3>
@@ -110,7 +107,6 @@
     <div class="md_divider"></div>
 
     <section class="md_sec md_sec_4 con">
-
         <div>
             <div class="txt_box">
                 <h3>
@@ -277,80 +273,77 @@
             background-color: #FFE100;
         }
 
-        /* 중간 섹션 시작 */
-        /* 공통 섹션 시작 */
-
+        /* ------------- 중간 섹션 시작 ------------- */
+		/* 공통 섹션 시작 */
         .md_sec {
-            min-height: 500px;
-            border: 10px solid black;
-            display: flex;
-        }
+			min-height: 500px;
+			border: 10px solid black;
+			display: flex;
+		}
 
-        .md_sec > div:first-child {
-            width: 55%;
-            display: flex;
-            align-items: center;
-            justify-self: center;
-        }
+		.md_sec > div:first-child {
+			width: 55%;
+			display: flex;
+			align-items: center;
+		}
 
-        .md_sec > div:last-child {
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            justify-self: center;
-        }
+		.md_sec > div:last-child {
+			flex-grow: 1;
+			display: flex;
+			align-items: center;
+		}
 
-        .md_divider {
-            height: 32px;
-            /* background-color: #fafafa; */
-            background-color: #818181;
-        }
-        /* 공통 섹션 끝 */
+		.md_divider {
+			height: 32px;
+			/* background-color: #fafafa; */
+			background-color: #818181;
+		}
 
-        /* 섹션 1 시작 */
-        .md_sec_1 .img-box {
-            width: 473px;
-        }
+		.md_sec .txt_box > h3 {
+			font-size: 40px;
+			line-height: 1.25;
+			margin: 0;
+		}
 
-        .md_sec .txt_box > h3 {
-            font-size: 40px;
-            line-height: 1.25;
-            margin: 0;
-        }
+		.md_sec .txt_box > p {
+			margin-top: 24px;
+			font-size: 15px;
+			line-height: 1.65;
+			color: #666;
+		}
 
-        .md_sec .txt_box > p {
-            margin-top: 24px;
-            font-size: 15px;
-            line-height: 1.65;
-            color: #666;
-        }
+		.md_sec .txt_box > .btn_box {
+			margin-top: 30px;
+			display: flex;
+		}
 
-        .md_sec .txt_box > .btn_box {
-            margin-top: 30px;
-            display: flex;
-        }
+		.md_sec .txt_box > .btn_box > a {
+			width: 258px;
+			height: 56px;
+			font-size: 16px;
+			line-height: 56px;
+			color: #333;
+			background-color: #f6f6f6;
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 
-        .md_sec .txt_box > .btn_box > a {
-            width: 258px;
-            height: 56px;
-            font-size: 16px;
-            line-height: 56px;
-            color: #333;
-            background-color: #f6f6f6;
-            border-radius: 10px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+		.md_sec .txt_box > .btn_box > a > img {
+			width: 6px;
+			height: 9px;
+			margin: 2px 0 0 8px;
+		}
+		/* 공통 섹션 끝 */
 
-        .md_sec .txt_box > .btn_box > a > img {
-            width: 6px;
-            height: 9px;
-            margin: 2px 0 0 8px;
-        }
-        /* 섹션 1 끝 */
+		/* 섹션 1 시작 */
+		.md_sec_1 .img-box {
+			width: 473px;
+		}
+		/* 섹션 1 끝 */
 
-        /* 섹션 2 시작 */
+		/* 섹션 2 시작 */
 		.md_sec_2 .img-box {
 			width: 409px;
 		}
@@ -368,37 +361,30 @@
 			display: block;
 			width: 100%;
 		}
-        /* 섹션 2 끝 */
+		/* 섹션 2 끝 */
 
-        /* 섹션 3 시작 */
-        .md_sec_3 .img-box {
-            width: 473px;
-        }
+		/* 섹션 3 시작 */
+		.md_sec_3 .img-box {
+			width: 473px;
+		}
+		/* 섹션 3 끝 */
 
+		/* 섹션 4 시작 */
+		.md_sec_4 .img-box {
+			width: 492px;
+		}
+		/* 섹션 4 끝 */
 
-        /* 섹션 3 끝 */
-
-         /* 섹션 4 시작 */
-        .md_sec_4 .img-box {
-            width: 492px;
-        }
-
-
-        /* 섹션 4 끝 */
-
-        /* 섹션 5 시작 */
-        .md_sec_5_wrap {
-            height: 750px;
-            background: url(../imgs/imgi_23_home_map.png) -12% 50% no-repeat rgb(255, 255, 255);
-            
-        }
-        .md_sec_5 .img-box {
-            width: 408px;
-        }
-
-
-        /* 섹션 5 끝 */
-        /* 중간 섹션 끝 */
+		/* 섹션 5 시작 */
+		.md_sec_5_wrap {
+			height: 750px;
+			background: #fff url(/imgs/imgi_23_home_map.png) no-repeat -12% 50%;
+		}
+		.md_sec_5 .img-box {
+			width: 408px;
+		}
+		/* 섹션 5 끝 */
+		/* ------------- 중간 섹션 끝 ------------- */
     </style>
 
 </body>
