@@ -10,6 +10,11 @@
 
     <!-- 제이쿼리 불러오기 -->
      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+     <!-- 슬릭 슬라이더 불러오기 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
 </head>
 <body>
 
@@ -229,8 +234,45 @@
             width: 660px;
             margin: 75px auto 0 auto;
         }
+
+        .checkcard_box .slider_box > .arrows > div {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: calc(100% + 170px);
+            cursor: pointer;
+        }
+
+        .checkcard_box .slider_box > .arrows > div:last-child {
+            right: auto;
+            left: calc(100% + 170px);
+        }
+
+        .checkcard_box .slider_box .slick .item.slick-center {
+            transform: scale(1.25);
+        }
+
+        .checkcard_box .slider_box .slick .item > .img-box {
+            padding-block: 45px;
+        }
         /* 체크카드 끝 */
     </style>
+
+    <script>
+        function SliderBox1__init() {
+        $('.slider_box > .slick').slick({
+            slidesToShow: 3,
+            slidesToScroll: 1,
+            centerMode:true,
+            centerPadding:0,
+            arrows:true,
+            prevArrow: ".slider_box > .arrows > .btn_arrow_left",
+            nextArrow: ".slider_box > .arrows > .btn_arrow_right",
+        });
+        }
+
+        SliderBox1__init();
+    </script>
 
 </body>
 </html>
