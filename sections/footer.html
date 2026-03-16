@@ -26,13 +26,20 @@
                         <li><a href="#">신용정보활용체제</a></li>
                         <li><a href="#">전자서명업무준칙</a></li>
                         <br>
-                        <li><a href="#" class="bold">전자민원접수</a></li>
+                        <li class="mg"><a href="#" class="bold">전자민원접수</a></li>
                         <li><a href="#">보호금융상품등록부</a></li>
                         <li><a href="#">상품공시실</a></li>
                         <li><a href="#">경영공시</a></li>
                         <li><a href="#">공지사항</a></li>
                     </ul>
                 </div>
+            </div>
+
+            <div class="box_2">
+                <span class="txt_busi">(주)카카오뱅크·윤호영·사업자번호 375-88-00197</span>
+                <span class="txt_busi_tel">대표전화 1599-3333</span>
+                <span class="txt_tel">(해외 +82-2-6420-3333)</span>
+                <div class="info_copyright">Copyright ⓒ KakaoBank Corp. All rights reserved.</div>
             </div>
         </div>
     </footer>
@@ -176,9 +183,33 @@
             transform: translateY(-50%);
         }
 
+        footer .box_1 > .menu_box > ul > li:first-child {
+            padding-left: 0;
+        }
 
+        footer .box_1 > .menu_box > ul > li.mg {
+            margin-left: 14px;
+        }
+
+        footer .box_1 > .menu_box > ul > li:hover > a {
+            text-decoration: underline;
+        }
+
+        footer .box_2 {
+            font-size: 12px;
+            color: #888;
+        }
+
+        footer .box_2 > .txt_busi_tel {
+            color: #000;
+            padding: 0 6px;
+        }
+
+        footer .box_2 > .info_copyright {
+            padding-top: 6px;
+            font-size: 11px;
+        }
         /* 푸터 끝 */
-
     </style>
 
 </body>
