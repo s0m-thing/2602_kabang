@@ -1,7 +1,24 @@
+/* 폰트 불러오기 */
+@font-face {
+  font-family: 'KoPubDotumLight';
+  src: url(/KOPUBWORLD_TTF_FONTS/KoPubWorld_Dotum_Light.ttf);
+}
+
+@font-face {
+  font-family: 'KoPubDotumMedium';
+  src: url(/KOPUBWORLD_TTF_FONTS/KoPubWorld_Dotum_Medium.ttf);
+}
+
+@font-face {
+  font-family: 'KoPubDotumBold';
+  src: url(/KOPUBWORLD_TTF_FONTS/KoPubWorld_Dotum_Bold.ttf);
+}
+
 /* 폰트적용 */
 html {
   /* 영문이면 roboto가 적용되고, 한글이면 Noto Sans KR가 적용되도록 아래와 같은 순서로 배치 */
-  font-family: "Roboto", "Noto Sans KR", sans-serif;
+  /* font-family: "Roboto", "Noto Sans KR", sans-serif; */
+  font-family: 'KoPubDotumMedium';
 }
 
 /* 노말라이즈 */
