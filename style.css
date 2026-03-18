@@ -213,7 +213,7 @@ header .menu_box .menu_box-sec_menu ul li a[target="_blank"]::after {
   width: 14px;
   height: 14px;
   display: inline-block;
-  background: url(../imgs/svg_line_outlink.svg);
+  background: url(imgs/svg_line_outlink.svg);
   background-size: 14px 14px;
   margin-left: 8px;
   margin-top: -2px;
@@ -307,7 +307,7 @@ header .drop_down a[target="_blank"]::after {
   width: 12px;
   height: 12px;
   display: inline-block;
-  background: url(../imgs/svg_line_outlink.svg);
+  background: url(imgs/svg_line_outlink.svg);
   background-size: 12px 12px;
   margin-left: 8px;
   margin-top: -3px;
@@ -395,7 +395,7 @@ header .global_logo:hover > img {
   width: 24px;
   height: 24px;
   display: block;
-  background-image: url(../imgs/img_kabang_250717.png);
+  background-image: url(imgs/img_kabang_250717.png);
   margin-right: 10px;
 }
 
@@ -1061,7 +1061,7 @@ footer .box_3 .sns_box > ul > li > a {
 }
 
 footer .box_3 .sns_box .ico_sns {
-  background: url(../imgs/imgi_24_ico_sns.png);
+  background: url(imgs/imgi_24_ico_sns.png);
   height: 100%;
 }
 
